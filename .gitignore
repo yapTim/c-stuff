@@ -6,3 +6,9 @@
 
 # Ignore .exe files
 *.exe
+
+# Ignore default output from GCC
+a.out
+
+# Ignore test.c because it's used for testing purposes
+test.c
