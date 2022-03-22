@@ -6,28 +6,28 @@ typedef struct{
     char LName[16];
     char FName[24];
     char MI;
-} Nametype;
+} NameType;
 
 typedef struct{
-    Nametype name;
+    NameType name;
     int ID;
     char course[8];
     int year;
-} Studtype;
+} StudType;
 
 typedef struct{
-    Studtype stud[SIZE];
+    StudType stud[SIZE];
     int count;
 } StudList;
 
 void initializeList(StudList*);
-void addStudent(StudList*, Studtype);
+void addStudent(StudList*, StudType);
 int findElem(int, StudList);
 
 int main() {
     int elementExists;
     StudList List;
-    Studtype record;
+    StudType record;
 
     initializeList(&List);
     addStudent(&List, record);
@@ -44,7 +44,7 @@ void initializeList(StudList *List)
     List->count = 0;
 }
 
-void addStudent(StudList *List, Studtype record)
+void addStudent(StudList *List, StudType record)
 {
     if (List->count < SIZE)
     {
